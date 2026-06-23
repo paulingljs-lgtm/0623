@@ -1,1 +1,66 @@
-hi
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄羅斯方塊遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>俄羅斯方塊</h1>
+        </div>
+        
+        <div class="game-wrapper">
+            <div class="game-main">
+                <canvas id="gameCanvas" width="300" height="600"></canvas>
+            </div>
+            
+            <div class="game-sidebar">
+                <div class="info-box">
+                    <div class="info-item">
+                        <label>分數</label>
+                        <div id="score" class="score-value">0</div>
+                    </div>
+                    <div class="info-item">
+                        <label>等級</label>
+                        <div id="level" class="level-value">1</div>
+                    </div>
+                    <div class="info-item">
+                        <label>消除行數</label>
+                        <div id="lines" class="lines-value">0</div>
+                    </div>
+                </div>
+                
+                <div class="preview-box">
+                    <label>下一個方塊</label>
+                    <canvas id="previewCanvas" width="120" height="120"></canvas>
+                </div>
+                
+                <div class="controls">
+                    <button id="startBtn" class="btn btn-primary">開始遊戲</button>
+                    <button id="pauseBtn" class="btn btn-secondary" disabled>暫停</button>
+                    <button id="resetBtn" class="btn btn-secondary">重置</button>
+                </div>
+                
+                <div class="instructions">
+                    <h3>遊戲說明</h3>
+                    <ul>
+                        <li><strong>←/→</strong> - 移動方塊</li>
+                        <li><strong>↑</strong> - 旋轉方塊</li>
+                        <li><strong>↓</strong> - 加速下落</li>
+                        <li><strong>空白鍵</strong> - 快速落地</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>消除一行得 10 分，每升一級遊戲速度增加</p>
+        </div>
+    </div>
+
+    <script src="tetris.js"></script>
+</body>
+</html>
